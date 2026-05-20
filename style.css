@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #2b241c;
+
+  font-family:
+    "Songti SC",
+    "STSong",
+    "Noto Serif SC",
+    serif;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(68, 68, 68, 0.12),
+      transparent 26%
+    ),
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(99, 69, 38, 0.10),
+      transparent 24%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f7f0df 0%,
+      #e9ddc6 100%
+    );
+
+  min-height: 100vh;
+}
+
+.ink-bg {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 70%,
+      rgba(20, 20, 20, 0.16),
+      transparent 18%
+    ),
+
+    radial-gradient(
+      circle at 75% 65%,
+      rgba(20, 20, 20, 0.09),
+      transparent 20%
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    auto,
+    auto,
+    42px 42px;
+
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 7vw;
+
+  background: rgba(247, 240, 223, 0.72);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom:
+    1px solid rgba(70, 55, 35, 0.12);
+}
+
+.brand {
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+nav a {
+  color: #3b3024;
+
+  text-decoration: none;
+
+  margin-left: 28px;
+
+  font-size: 15px;
+}
+
+main {
+  width: min(1120px, 88vw);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 76vh;
+
+  display: grid;
+  place-content: center;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.hero::before {
+
+  content: "山水";
+
+  position: absolute;
+
+  inset: 18% auto auto 50%;
+
+  transform: translateX(-50%);
+
+  font-size:
+    clamp(120px, 22vw, 260px);
+
+  color: rgba(35, 30, 24, 0.055);
+
+  white-space: nowrap;
+
+  z-index: -1;
+}
+
+.eyebrow {
+
+  letter-spacing: 0.35em;
+
+  font-size: 14px;
+
+  color: #8b2f23;
+}
+
+h1 {
+
+  margin: 14px 0;
+
+  font-size:
+    clamp(46px, 9vw, 118px);
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-size: 20px;
+
+  line-height: 1.9;
+
+  color: #5d5143;
+}
+
+.hero-actions {
+  margin-top: 36px;
+}
+
+.btn {
+
+  display: inline-block;
+
+  padding: 13px 26px;
+
+  margin: 8px;
+
+  border:
+    1px solid rgba(54, 43, 31, 0.5);
+
+  border-radius: 999px;
+
+  color: #2b241c;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.btn:hover {
+
+  transform: translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, 0.45);
+}
+
+.btn.primary {
+
+  background: #2b241c;
+
+  color: #f7f0df;
+}
+
+.scroll-card,
+.download {
+
+  position: relative;
+
+  margin: 60px 0;
+
+  padding: 54px;
+
+  border:
+    1px solid rgba(72, 58, 39, 0.18);
+
+  background:
+    rgba(255, 252, 242, 0.52);
+
+  box-shadow:
+    0 22px 70px rgba(55, 42, 28, 0.11);
+}
+
+.scroll-card h2,
+.download h2 {
+
+  font-size: 34px;
+
+  margin-top: 0;
+}
+
+.scroll-card p,
+.download p,
+.work-card p {
+
+  line-height: 1.9;
+
+  color: #5d5143;
+}
+
+.seal {
+
+  position: absolute;
+
+  right: 42px;
+  top: 42px;
+
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  color: #9f2a22;
+
+  border:
+    2px solid #9f2a22;
+
+  font-weight: 700;
+}
+
+.works {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+
+  margin: 60px 0;
+}
+
+.work-card {
+
+  min-height: 240px;
+
+  padding: 34px;
+
+  background:
+
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,0.65),
+      rgba(255,255,255,0.18)
+    ),
+
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(40,40,40,0.14),
+      transparent 30%
+    );
+
+  border:
+    1px solid rgba(72, 58, 39, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 50px rgba(55, 42, 28, 0.12);
+}
+
+.work-card h3 {
+
+  margin: 0 0 18px;
+
+  font-size: 52px;
+
+  font-weight: 400;
+}
+
+footer {
+
+  padding: 60px 0 40px;
+
+  text-align: center;
+
+  color: #75695c;
+}
+
+@media (max-width: 760px) {
+
+  .site-header {
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    flex-direction: column;
+  }
+
+  nav a {
+
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  .works {
+
+    grid-template-columns: 1fr;
+  }
+
+  .scroll-card,
+  .download {
+
+    padding: 34px 24px;
+  }
+}
